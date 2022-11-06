@@ -1,34 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## next-ts-exlint-prettier-demo
 
-## Getting Started
+這是一個依賴前端規範套件的示範專案，內有 TypeScript、ESLint 及 Prettier，另外客製化設定了 Alias 讓引入可以使用自行設定的模板，例如 `import Header from '@/components/Header'`，不用在使用絕對定位。
 
-First, run the development server:
+- 介紹文章可參考 - [[Next Note] - 把 TypeScript、ESLint、Prettier、Alias 摻再一起做沙尿牛丸](https://rexhung0302.github.io/2022/11/06/20221106/)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 建議環境
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- yarn v1.22.19
+- nvm v0.39.1
+- node >= v16
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 環境安裝說明
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. yarn
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. yarn dev / build

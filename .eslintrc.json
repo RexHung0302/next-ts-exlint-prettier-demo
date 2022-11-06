@@ -1,0 +1,89 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb", "next/core-web-vitals", "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "import",
+        "react",
+        "@typescript-eslint",
+        "react-hooks",
+        "prettier"
+    ],
+    "settings": {
+        // 解決 eslint-plugin-import 只支持 ES6 模块的問題，原本只支援 .js, .jsx
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true,
+                "project": "./tsconfig.json"
+            },
+            "alias": {
+                "map": [["@components", "./components"]],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
+    "rules": {
+        // 0 = off, 1 = warn, 2 = error
+        // suppress errors for missing "import React" in files
+        "react/react-in-jsx-scope": "off",
+        // file extension rule
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".ts", ".tsx", ".css"]
+            }
+        ],
+        "quotes": [2, "double"],
+        "jsx-quotes": ["error", "prefer-double"],
+        "prefer-arrow-callback": [2, { "allowNamedFunctions": true }],
+        "indent": [2, 2],
+        "semi": [2, "always"],
+        "operator-linebreak": [
+            2, "after", { "overrides": { "?": "before", ":": "before" } }
+        ],
+        "max-len": [
+            2,
+            {
+                "code": 180,
+                "tabWidth": 2,
+                "ignoreComments": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        "array-element-newline": [2, { "multiline": true }],
+        "array-bracket-newline": "off",
+        // eslint-disable-next-line no-dupe-keys
+        "arrow-body-style": "off",
+        "react/function-component-definition": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        // 解決 import/extensions 問題
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "react/require-default-props": "off",
+        "react/jsx-no-useless-fragment": "off",
+        "no-shadow": "off",
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    }
+}

@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import Header from "@components/Header";
+import styles from "@styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -12,12 +13,16 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Header />
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to
+          {" "}
+          <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing
+          {" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -60,12 +65,13 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by
+          {" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
